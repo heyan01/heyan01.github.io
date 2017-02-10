@@ -53,7 +53,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -89,20 +89,22 @@
         <ul>
 <li>掌握多少终端命令以及运用的熟练与否决定了装帅耍酷得几分;在或黑或白的小窗口里,敲击着各种命令,真有一种现代高科技电影里的黑客间谍既视感;想象着在分秒必争的,敌人顷刻即将闯入的黑夜里,专注快速的码着字符,最终窃取到资料,大功告成的场面,心头一阵激动,我的补补终端命令了;下面开始:</li>
 </ul>
-<h2 id="显示当前目录下的所以文件"><a href="#显示当前目录下的所以文件" class="headerlink" title="显示当前目录下的所以文件"></a>显示当前目录下的所以文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ls -l /etc/host</div><div class="line">-rw-r--r--  1 root  wheel  260  1 20 14:52 /etc/hosts</div></pre></td></tr></table></figure>
+<h2 id="显示当前目录下的所以文件"><a href="#显示当前目录下的所以文件" class="headerlink" title="显示当前目录下的所以文件"></a>显示当前目录下的所以文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ ls -l /etc/host //以长数据串的形式列出当前目录下的数据文件和目录 </div><div class="line">-rw-r--r--  1 root  wheel  260  1 20 14:52 /etc/hosts</div></pre></td></tr></table></figure>
 <h2 id="查看文件内容-可以进行修改"><a href="#查看文件内容-可以进行修改" class="headerlink" title="查看文件内容,可以进行修改"></a>查看文件内容,可以进行修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo vim /etc/hosts</div></pre></td></tr></table></figure>
 <p>如果该路径没有就创建一个文件,且跳到编辑页面,<br>i进入编辑模式,刚进入是不能编辑的,输入i进入可编辑状态<br>esc修改之后,点击esc键,退出编辑模式<br>输入:w 保存输入,但不退出<br>输入:q! 不保存,退出;<br>输入:wq 保存所做的修改并退出(常用);</p>
 <h2 id="查看电脑运行时间"><a href="#查看电脑运行时间" class="headerlink" title="查看电脑运行时间"></a>查看电脑运行时间</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">localhost:weapp yxp$ uptime</div><div class="line">11:29  up  1:11, 3 users, load averages: 3.07 2.80 2.67</div></pre></td></tr></table></figure>
 <p>11:29当前时间, up  1:11 自我开机电脑运行的小时数</p>
-<h2 id="创建-删除一个目录"><a href="#创建-删除一个目录" class="headerlink" title="创建,删除一个目录"></a>创建,删除一个目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir XXX	</div><div class="line">rmdir xxx 删除空目录，注意是空目录</div></pre></td></tr></table></figure>
+<h2 id="创建-删除一个目录"><a href="#创建-删除一个目录" class="headerlink" title="创建,删除一个目录"></a>创建,删除一个目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir XXX	</div><div class="line">rmdir xxx 删除空目录，注意是空目录</div><div class="line">cd xxx &amp; mkdir xxx 切换文件夹并创建一个文件夹</div></pre></td></tr></table></figure>
 <h2 id="切换工作目录"><a href="#切换工作目录" class="headerlink" title="切换工作目录"></a>切换工作目录</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cd xxx</div></pre></td></tr></table></figure>
 <p>./ 当前目录 ../上一级目录</p>
 <h2 id="显示当前路径"><a href="#显示当前路径" class="headerlink" title="显示当前路径"></a>显示当前路径</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ pwd</div></pre></td></tr></table></figure>
+<h2 id="清屏"><a href="#清屏" class="headerlink" title="清屏"></a>清屏</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">clear</div></pre></td></tr></table></figure>
+<h2 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2  </div><div class="line">cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中</div></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/10/mac终端命令汇总/" data-id="ciyzakptr0002jks67znvtbnp" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/10/mac终端命令汇总/" data-id="ciyzakptr0002jks67znvtbnp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/终端命令/">终端命令</a></li></ul>
@@ -153,7 +155,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/09/小程序之学习笔记/" data-id="ciyzakptx0004jks68xep4h27" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/09/小程序之学习笔记/" data-id="ciyzakptx0004jks68xep4h27" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
@@ -206,7 +208,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/08/React基本写法总结/" data-id="ciyzakpto0001jks64q5s5svc" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/08/React基本写法总结/" data-id="ciyzakpto0001jks64q5s5svc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/react/">react</a></li></ul>
@@ -249,7 +251,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/07/starting/" data-id="ciyzakpu00005jks649byxlbs" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/07/starting/" data-id="ciyzakpu00005jks649byxlbs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
@@ -296,7 +298,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/07/hello-world/" data-id="ciyzakptj0000jks6hpsp5miw" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/07/hello-world/" data-id="ciyzakptj0000jks6hpsp5miw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -316,7 +318,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端命令/">终端命令</a></li></ul>
     </div>
@@ -335,7 +337,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
@@ -345,7 +347,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
