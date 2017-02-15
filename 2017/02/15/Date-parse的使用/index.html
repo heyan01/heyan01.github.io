@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/15/Date-parse的使用/index.html">
 <meta property="og:site_name" content="Hero orange">
 <meta property="og:description" content="工作中用到date的频率非常高,如果对Date的方法不熟悉,每次用的时候都现看现学,就很忙乱了。昨天写页面时,遇到了这样的情况:一个首页的展览,如果正处在展览的时间中,比如展示从2017-02-14到2017-02-17,今天是2月15日,此时只能修改展示结束时间;如果还没开始展示,则开始时间和结束时间都能修改;第三种情况是展示已经结束,则这两个时间都不能修改;这就要求我需要比较时间从而进行判断">
-<meta property="og:updated_time" content="2017-02-15T06:41:41.000Z">
+<meta property="og:updated_time" content="2017-02-15T06:46:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何比较两个时间大小">
 <meta name="twitter:description" content="工作中用到date的频率非常高,如果对Date的方法不熟悉,每次用的时候都现看现学,就很忙乱了。昨天写页面时,遇到了这样的情况:一个首页的展览,如果正处在展览的时间中,比如展示从2017-02-14到2017-02-17,今天是2月15日,此时只能修改展示结束时间;如果还没开始展示,则开始时间和结束时间都能修改;第三种情况是展示已经结束,则这两个时间都不能修改;这就要求我需要比较时间从而进行判断">
@@ -54,7 +54,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Zoeken"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -98,7 +98,7 @@
 <p>  想象代码不少于6行,放弃此方法;<br>  2 利用距离1970年1月1日0点的毫秒数进行比较<br>  获取当前时间距离标准时间的毫秒数比较简单,一行代码搞定;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new Date().getTime()</div></pre></td></tr></table></figure>
 <p>  接下来,分析那两个的时间,字符串类型,格式为’2017-1-2 12:33:00’;利用Date.parse(),参数是日期格式的字符串,函并返回该日期与 1970 年 1 月 1 日午夜之间相差的毫秒数。很多书上写日期字符串的格式必须是’mm-dd-yyyy h:m:s’,但通过测试,发现并不是,如图</p>
-<pre><code>![代码](img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png)
+<pre><code>![代码](../img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png)
 </code></pre><p>所以最终通过此方法,获取毫秒数,进行对比;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let startSec=Date.parse(record.start_time);</div><div class="line">let endSec=Date.parse(record.end_time);</div></pre></td></tr></table></figure>
 <p>  先写到这,去吃饭;</p>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/15/Date-parse的使用/" data-id="ciz6kujxu0004kas6y96f8zs0" class="article-share-link">Delen</a>
+      <a data-url="http://yoursite.com/2017/02/15/Date-parse的使用/" data-id="ciz6kujxu0004kas6y96f8zs0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Date对象的方法/">Date对象的方法</a></li></ul>
@@ -121,7 +121,7 @@
   
   
     <a href="/2017/02/10/mac终端命令汇总/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ouder</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">mac终端命令汇总</div>
     </a>
   
@@ -139,7 +139,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Labels</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date对象的方法/">Date对象的方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端命令/">终端命令</a></li></ul>
     </div>
@@ -158,7 +158,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archieven</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
     </div>
@@ -168,7 +168,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recente berichten</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
