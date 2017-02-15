@@ -99,7 +99,7 @@
 <p>  想象代码不少于6行,放弃此方法;<br>  2 利用距离1970年1月1日0点的毫秒数进行比较<br>  获取当前时间距离标准时间的毫秒数比较简单,一行代码搞定;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new Date().getTime()</div></pre></td></tr></table></figure>
 <p>  接下来,分析那两个的时间,字符串类型,格式为’2017-1-2 12:33:00’;利用Date.parse(),参数是日期格式的字符串,函并返回该日期与 1970 年 1 月 1 日午夜之间相差的毫秒数。很多书上写日期字符串的格式必须是’mm-dd-yyyy h:m:s’,但通过测试,发现并不是,如图</p>
-<pre><code>![代码](../img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png)
+<pre><code>![代码](..\img\9227CDF1-E188-4FA9-9F04-36D509448DE1.png)
 </code></pre><p>所以最终通过此方法,获取毫秒数,进行对比;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let startSec=Date.parse(record.start_time);</div><div class="line">let endSec=Date.parse(record.end_time);</div></pre></td></tr></table></figure>
 <p>  先写到这,去吃饭;</p>
