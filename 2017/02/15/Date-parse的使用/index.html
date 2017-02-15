@@ -11,10 +11,12 @@
 <meta property="og:url" content="http://yoursite.com/2017/02/15/Date-parse的使用/index.html">
 <meta property="og:site_name" content="Hero orange">
 <meta property="og:description" content="工作中用到date的频率非常高,如果对Date的方法不熟悉,每次用的时候都现看现学,就很忙乱了。昨天写页面时,遇到了这样的情况:一个首页的展览,如果正处在展览的时间中,比如展示从2017-02-14到2017-02-17,今天是2月15日,此时只能修改展示结束时间;如果还没开始展示,则开始时间和结束时间都能修改;第三种情况是展示已经结束,则这两个时间都不能修改;这就要求我需要比较时间从而进行判断">
-<meta property="og:updated_time" content="2017-02-15T07:11:28.000Z">
+<meta property="og:image" content="https://github.com/heyan01/heyan01.github.io/blob/master/img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png?raw=true">
+<meta property="og:updated_time" content="2017-02-15T07:20:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何比较两个时间大小">
 <meta name="twitter:description" content="工作中用到date的频率非常高,如果对Date的方法不熟悉,每次用的时候都现看现学,就很忙乱了。昨天写页面时,遇到了这样的情况:一个首页的展览,如果正处在展览的时间中,比如展示从2017-02-14到2017-02-17,今天是2月15日,此时只能修改展示结束时间;如果还没开始展示,则开始时间和结束时间都能修改;第三种情况是展示已经结束,则这两个时间都不能修改;这就要求我需要比较时间从而进行判断">
+<meta name="twitter:image" content="https://github.com/heyan01/heyan01.github.io/blob/master/img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png?raw=true">
   
     <link rel="alternate" href="/atom.xml" title="Hero orange" type="application/atom+xml">
   
@@ -52,9 +54,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -97,9 +99,7 @@
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">new Date().toLocaleString( )//获取当前日期和时间 字符串格式</div><div class="line">&quot;2017/2/15 上午11:49:25&quot;</div><div class="line">new Date().toLocaleDateString();   //获取字符串格式日期</div><div class="line">&quot;2017/2/15&quot;</div><div class="line">new Date().toLocaleTimeString() //获取字符串格式时间</div><div class="line">&quot;上午11:51:23&quot;</div></pre></td></tr></table></figure>
 <p>  想象代码不少于6行,放弃此方法;<br>  2 利用距离1970年1月1日0点的毫秒数进行比较<br>  获取当前时间距离标准时间的毫秒数比较简单,一行代码搞定;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">new Date().getTime()</div></pre></td></tr></table></figure>
-<p>  接下来,分析那两个的时间,字符串类型,格式为’2017-1-2 12:33:00’;利用Date.parse(),参数是日期格式的字符串,函并返回该日期与 1970 年 1 月 1 日午夜之间相差的毫秒数。很多书上写日期字符串的格式必须是’mm-dd-yyyy h:m:s’,但通过测试,发现并不是,如图</p>
-<pre><code>![代码](https://github.com/heyan01/heyan01.github.io/blob/master/img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png?raw=true)
-</code></pre><p>所以最终通过此方法,获取毫秒数,进行对比;</p>
+<p>  接下来,分析那两个的时间,字符串类型,格式为’2017-1-2 12:33:00’;利用Date.parse(),参数是日期格式的字符串,函并返回该日期与 1970 年 1 月 1 日午夜之间相差的毫秒数。很多书上写日期字符串的格式必须是’mm-dd-yyyy h:m:s’,但通过测试,发现并不是,如图<br>  <img src="https://github.com/heyan01/heyan01.github.io/blob/master/img/9227CDF1-E188-4FA9-9F04-36D509448DE1.png?raw=true" alt="代码"><br>所以最终通过此方法,获取毫秒数,进行对比;</p>
   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">let startSec=Date.parse(record.start_time);</div><div class="line">let endSec=Date.parse(record.end_time);</div></pre></td></tr></table></figure>
 <p>  先写到这,去吃饭;</p>
 </li>
@@ -108,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/15/Date-parse的使用/" data-id="ciz6kujxu0004kas6y96f8zs0" class="article-share-link">Partager</a>
+      <a data-url="http://yoursite.com/2017/02/15/Date-parse的使用/" data-id="ciz6kujxu0004kas6y96f8zs0" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Date对象的方法/">Date对象的方法</a></li></ul>
@@ -121,7 +121,7 @@
   
   
     <a href="/2017/02/10/mac终端命令汇总/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Ancien</strong>
+      <strong class="article-nav-caption">Older</strong>
       <div class="article-nav-title">mac终端命令汇总</div>
     </a>
   
@@ -139,7 +139,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
       <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Date对象的方法/">Date对象的方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/react/">react</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小程序/">小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/终端命令/">终端命令</a></li></ul>
     </div>
@@ -149,7 +149,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
       <a href="/tags/Date对象的方法/" style="font-size: 10px;">Date对象的方法</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/小程序/" style="font-size: 10px;">小程序</a> <a href="/tags/终端命令/" style="font-size: 10px;">终端命令</a>
     </div>
@@ -168,7 +168,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
@@ -205,7 +205,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 春光里的小橘子<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
